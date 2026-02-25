@@ -1,0 +1,22 @@
+---
+import projects from "../../config/projects.json";
+---
+
+<section>
+  <h2 class="text-5xl font-bold text-center text-primary">Projects</h2>
+
+  <div class="flex flex-wrap flex-row justify-center gap-10 mt-10">
+    {
+      projects.map((project) => (
+        <div class="flex flex-col transition-all duration-200 ease-in-out p-7 bg-[#181818] border border-[#181818] hover:border-indigo-500 hover:scale-102 rounded-sm w-90">
+          <img loading="lazy" class="w-40 mx-auto" src="favicon.svg" alt="" />
+          <div class="ml-4">
+            <h2 class="text-4xl font-bold mt-10 mb-5">{project.title}</h2>
+            <p class="text-md font-thin mb-5">{project.description}</p>
+          </div>
+          <button class=" rounded-xl mt-auto cursor-pointer transition-color duration-100 ease-in-out bg-indigo-500 px-4 py-3 hover:bg-indigo-400">More info</button>
+        </div>
+      ))
+    }
+  </div>
+</section>

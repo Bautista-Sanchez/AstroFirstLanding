@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+import { intersection } from "astro:schema";
+import "../styles/global.css";
+import "../styles/layout-style.css";
+import Footer from "../components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astro Landing | {title}</title>
+  </head>
+  <body>
+    <main class="mx-auto md:px-10 container md:pt-15 md:pb-15">
+      <slot />
+    </main>
+    <Footer />
+</body>
+</html>
